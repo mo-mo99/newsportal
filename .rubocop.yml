@@ -1,0 +1,155 @@
+require: rubocop-rails
+AllCops:
+  TargetRubyVersion: 3.0
+  DisplayStyleGuide: true
+  DisplayCopNames: true
+  Exclude:
+    - config/initializers/*
+    - bin/**/*
+    - db/**/*
+    - lib/templates/**/*
+    - vendor/**/*
+    - Rakefile
+    - config/routes.rb
+
+Rails:
+  Enabled: true
+
+Rails/UnknownEnv:
+  Enabled: false
+
+Rails/InverseOf:
+  Enabled: false
+
+Rails/HasManyOrHasOneDependent:
+  Enabled: false
+
+Rails/SkipsModelValidations:
+  Enabled: false
+
+Rails/DynamicFindBy:
+  Enabled: false
+
+Rails/HttpPositionalArguments:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 24
+
+Metrics/AbcSize:
+  Max: 32
+
+Metrics/BlockLength:
+  Max: 256
+  Exclude:
+    - spec/**/*
+
+Metrics/ClassLength:
+  Max: 300
+
+Metrics/ModuleLength:
+  Max: 270
+
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+Metrics/PerceivedComplexity:
+  Max: 10
+
+Style/Documentation:
+  Enabled: false
+
+Style/GlobalVars:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/FormatString:
+  Enabled: false
+
+Style/EmptyCaseCondition:
+  Enabled: false
+
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    default: ()
+    '%i': '()'
+    '%I': '()'
+    '%w': '()'
+    '%W': '()'
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Style/DateTime:
+  Enabled: false
+
+Style/NumericLiteralPrefix:
+  Enabled: false
+
+Style/NestedParenthesizedCalls:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/FormatStringToken:
+  Enabled: false
+
+Style/NumericPredicate:
+  Enabled: false
+
+Style/SafeNavigation:
+  Enabled: false
+
+Layout/HashAlignment:
+  Enabled: false
+
+Layout/ElseAlignment:
+  Enabled: false
+
+Layout/FirstArrayElementIndentation:
+  Enabled: false
+
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: variable
+
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
+  SupportedStyles:
+    - with_first_parameter
+    - with_fixed_indentation
+
+Layout/MultilineMethodCallBraceLayout:
+  Enabled: false
+  # EnforcedStyle: new_line
+  # SupportedStyles:
+  #   - symmetrical
+  #   - new_line
+  #   - same_line
+
+Layout/MultilineArrayBraceLayout:
+  Enabled: false
+  # EnforcedStyle: new_line
+  # SupportedStyles:
+  #   - symmetrical
+  #   - new_line
+  #   - same_line
+
+Layout/SpaceInLambdaLiteral:
+  EnforcedStyle: require_space
+
+Layout/MultilineMethodCallIndentation:
+  Enabled: false
+  # EnforcedStyle: aligned
+  # SupportedStyles:
+  #   - aligned
+  #   - indented
+  #   - indented_relative_to_receiver
+
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
