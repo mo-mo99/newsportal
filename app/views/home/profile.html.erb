@@ -1,0 +1,17 @@
+
+<div class="card mt-2" style="width: 18rem;">
+  
+  <img src="https://dummyimage.com/100/00ff48/ff0000.png&text=Image+Found" class="card-img-top" alt="">
+  <div class="card-body">
+    <h5 class="card-title"><%= current_user.email.partition("@")[0] %></h5>
+    <p class="form-text">your personal accout</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><%= link_to 'Profile', edit_user_registration_path %></li>
+    <li class="list-group-item"><%= link_to 'Account Setting', setting_path %></li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Home Page</a>
+    <a href="#" class="card-link">Delete Account</a>
+  </div>
+</div>
