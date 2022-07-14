@@ -5,7 +5,7 @@ class SaveNews
 
   def call
     fetch_news.map do |news|
-      News.create!(news)
+      News.create(news)
     end
   end
 
