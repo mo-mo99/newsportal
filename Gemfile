@@ -10,8 +10,10 @@ gem "rails", "~> 7.0.3"
 
 gem "bootsnap", require: false
 gem "devise"
+gem "enumerize"
 gem "httparty"
 gem "importmap-rails"
+gem "interactor"
 gem "jbuilder"
 gem "json", "~> 2.6", ">= 2.6.2"
 gem "puma", "~> 5.0"
@@ -20,6 +22,7 @@ gem "rubocop-rails"
 gem "sprockets-rails"
 gem "stimulus-rails"
 gem "turbo-rails"
+gem "will_paginate"
 
 group :development, :test do
   gem "debug", platforms: %i(mri mingw x64_mingw)

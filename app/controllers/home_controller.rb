@@ -2,14 +2,19 @@
 
 class HomeController < ApplicationController
   before_action :authenticate_user!, only: %i(setting profile)
+  before_action :authorize_user, only: %i(fetch_news)
 
   def index
-    @results = ::NewsFetcher::Adapter.new.latest_news
+    @all_news = News.all.paginate(page: params[:page], per_page: 10).order("published_at")
   end
 
   def profile
   end
 
   def setting
+  end
+
+  def fetch_news
+    ::SaveNews.call
   end
 end
