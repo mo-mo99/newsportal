@@ -1,1 +1,19 @@
+<div class="row" >
 
+<% @all_news.map do |news|%>
+    <div class="card m-2" style="width: 18rem;">
+    <img src=<%= news.image %> class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title"><%= news.title %></h5>
+        <h5><%= news.published_at %></h5>
+        <a href=<%= news.url %> class="btn btn-primary">Check it!</a>
+    </div>
+    </div>
+<% end %>
+<div class="digg_pagination mt-2" style="text-align:center;">
+    <div class="page_info">
+      <%= page_entries_info @all_news %>
+    </div>
+    <%= will_paginate @all_news, :container => false %>
+</div>
+</div>
