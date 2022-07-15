@@ -1,9 +1,6 @@
 class MakeUrlUnique < ActiveRecord::Migration[7.0]
-  def up
-    add_index :news, :url, unique: true 
-  end
-
-  def down
+  def change
     remove_index :news, :title
+    add_index :news, :url, unique: true 
   end
 end
