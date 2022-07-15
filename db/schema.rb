@@ -24,7 +24,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_15_083346) do
     t.date "published_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["title"], name: "index_news_on_title"
     t.index ["url"], name: "index_news_on_url", unique: true
   end
 
