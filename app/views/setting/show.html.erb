@@ -1,0 +1,28 @@
+<div class="container">
+  <%= form_with url: 'setting/update', method: :post do |s| %>
+    <div class="card mt-2">
+      <h5 class="card-header">Tags</h5>
+      <div class="card-body">
+        <% @categories.map do |category| %>
+
+        <%= s.check_box category ,checked: @tags.include?(category) %>
+        <%= s.label category, category %><br/>
+        <% end %>
+      </div>
+    </div>
+    
+      <div class="card mt-2">
+        <h5 class="card-header">Select Api</h5>
+        <div class="card-body">
+
+          <%= s.check_box :mediastack, checked: @apis.include?("mediastack") %>
+          <%= s.label :mediastack %>
+          <%= s.check_box :currentsapi, checked: @apis.include?("currentsapi") %>
+          <%= s.label :currentsapi %>
+          
+        </div>
+      </div>
+      <%= s.submit class: "btn btn-primary mt-2" %>
+        <% end %>
+
+</div>

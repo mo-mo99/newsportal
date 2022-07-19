@@ -11,11 +11,9 @@ class HomeController < ApplicationController
   def profile
   end
 
-  def setting
-  end
-
   def fetch_news
     ::NewsFetcherJob.perform_async
     redirect_to "/", notice: "News added"
   end
+
 end
